@@ -20,6 +20,7 @@ from typing import (
     Any,
     Final,
     Literal,
+    Optional,
     cast,
     overload,
 )
@@ -743,7 +744,7 @@ class Response:
     url: str
     encoding: str | None
     history: list[Response]
-    reason: str
+    reason: Optional[str]
     cookies: RequestsCookieJar
     elapsed: datetime.timedelta
     request: PreparedRequest
